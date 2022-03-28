@@ -1,0 +1,9 @@
+StrictHostKeyChecking no
+UserKnownHostsFile /dev/null
+CheckHostIP no
+KbdInteractiveAuthentication no
+PasswordAuthentication no
+PreferredAuthentications publickey
+RequestTTY no
+UpdateHostKeys no
+LogLevel FATAL

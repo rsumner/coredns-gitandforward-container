@@ -1,0 +1,17 @@
+. {
+    forward . {$FORWARDER1} {$FORWARDER2}
+    root /etc/coredns/zones
+    git {$GIT_URL} {
+      interval {$GIT_INT}
+    }
+    auto {
+      directory /etc/coredns/zones db\.(.*) {1}
+    }
+    errors
+    cache 
+    prometheus :9153
+    health :8080
+    ready :8181
+# Uncomment to log all requests
+#    log
+}
