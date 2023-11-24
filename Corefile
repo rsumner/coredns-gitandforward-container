@@ -1,4 +1,5 @@
 . {
+    import /etc/coredns/conf.d/*.conf
     forward . {$FORWARDER1} {$FORWARDER2}
     root /etc/coredns/zones
     git {$GIT_URL} {
@@ -9,9 +10,4 @@
     }
     errors
     cache 
-    prometheus :9153
-    health :8080
-    ready :8181
-# Uncomment to log all requests
-#    log
 }
